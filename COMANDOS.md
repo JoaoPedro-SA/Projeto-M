@@ -97,3 +97,24 @@ E abra:
 ```text
 http://127.0.0.1:5174
 ```
+
+## 8. Publicar no Render
+
+Este projeto deve ser publicado como Static Site.
+
+Antes de publicar, teste localmente:
+
+```powershell
+npm.cmd install
+npm.cmd run build
+```
+
+No Render, use:
+
+```text
+Service Type: Static Site
+Build Command: npm install && npm run build
+Publish Directory: dist
+```
+
+Se usar Blueprint, o arquivo `render.yaml` da raiz ja configura isso automaticamente.
