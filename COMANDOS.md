@@ -113,7 +113,7 @@ No Render, use:
 
 ```text
 Service Type: Static Site
-Build Command: npm install && npm run build
+Build Command: npm run build
 Publish Directory: dist
 ```
 
