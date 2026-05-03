@@ -18,6 +18,8 @@ import {
 
 const whatsappBase =
   'https://wa.me/5511983612385?text=Ol%C3%A1!%20Quero%20agendar%20minha%20aula%20experimental%20gratuita%20no%20Movimento%20Meraki.';
+const instagramUrl =
+  'https://www.instagram.com/movimento.meraki?igsh=amU1Mm95dXFzeG4z';
 
 const navLinks = [
   ['#formatos', 'Formatos'],
@@ -58,6 +60,14 @@ const painCards = [
     alt: 'Flexibilidade',
     text: 'Quer se cuidar, mas precisa de flexibilidade na rotina',
   },
+];
+
+const instagramVideos = [
+  'DUn3ENVjo58',
+  'DTadPYUAOIj',
+  'DPwfznGjtoJ',
+  'DVObAwajrrY',
+  'DTnfNJijmlr'
 ];
 
 const formats = [
@@ -460,6 +470,8 @@ function App() {
         onPrevious={previousGallery}
         onOpen={setLightboxImage}
       />
+      <InstagramCta />
+      <InstagramVideos />
       <Team
         selectedId={teamMember}
         selectedMember={selectedMember}
@@ -485,6 +497,7 @@ function App() {
         onClose={() => setMenuOpen(false)}
         handleInternalLink={handleInternalLink}
       />
+      <FloatingMobileCta hidden={menuOpen || Boolean(lightboxImage)} />
     </>
   );
 }
@@ -729,6 +742,61 @@ function Gallery({ index, onNext, onPrevious, onOpen }) {
           >
             <ChevronRight />
           </button>
+        </div>
+      </div>
+    </section>
+  );
+}
+
+function InstagramCta() {
+  return (
+    <section className="instagram-cta">
+      <div className="container instagram-cta-content">
+        <div>
+          <h2>Acompanhe o Movimento Meraki no Instagram</h2>
+          <p>
+            Veja a rotina do estúdio, novidades, bastidores e momentos reais das
+            aulas.
+          </p>
+        </div>
+        <a
+          href={instagramUrl}
+          className="btn btn-primary instagram-cta-btn"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <InstagramIcon />
+          Ver Instagram
+        </a>
+      </div>
+    </section>
+  );
+}
+
+function InstagramVideos() {
+  return (
+    <section className="instagram-videos section-padding bg-lavender">
+      <div className="container">
+        <div className="section-title text-center">
+          <h2>Veja nossos reels no Instagram</h2>
+          <p>
+            Assista a alguns dos nossos vídeos mais recentes e inspire-se com o Movimento Meraki.
+          </p>
+        </div>
+        <div className="video-grid">
+          {instagramVideos.map((videoId) => (
+            <div className="video-card" key={videoId}>
+              <iframe
+                src={`https://www.instagram.com/p/${videoId}/embed`}
+                width="100%"
+                height="400"
+                frameBorder="0"
+                scrolling="no"
+                allowTransparency="true"
+                title={`Instagram Reel ${videoId}`}
+              ></iframe>
+            </div>
+          ))}
         </div>
       </div>
     </section>
@@ -1153,7 +1221,7 @@ function Footer({ handleInternalLink }) {
           <h4 className="footer-title">REDES SOCIAIS</h4>
           <div className="social-links">
             <a
-              href="https://www.instagram.com/movimento.meraki?igsh=amU1Mm95dXFzeG4z"
+              href={instagramUrl}
               target="_blank"
               rel="noopener noreferrer"
               aria-label="Instagram"
@@ -1249,6 +1317,22 @@ function MobileMenu({ open, onClose, handleInternalLink }) {
           <span>Falar no WhatsApp</span>
         </a>
       </div>
+    </div>
+  );
+}
+
+function FloatingMobileCta({ hidden }) {
+  return (
+    <div className={`floating-mobile-cta ${hidden ? 'is-hidden' : ''}`}>
+      <a
+        href={whatsappBase}
+        className="btn btn-primary btn-block"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <WhatsAppIcon />
+        <span>Agendar aula grátis</span>
+      </a>
     </div>
   );
 }
