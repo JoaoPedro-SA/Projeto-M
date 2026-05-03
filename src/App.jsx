@@ -1152,22 +1152,22 @@ function Footer({ handleInternalLink }) {
           <h4 className="footer-title">REDES SOCIAIS</h4>
           <div className="social-links">
             <a
-              href="https://instagram.com/movimentomeraki"
+              href="https://www.instagram.com/movimento.meraki?igsh=amU1Mm95dXFzeG4z"
               target="_blank"
               rel="noopener noreferrer"
               aria-label="Instagram"
             >
               <InstagramIcon />
             </a>
-            <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+            <a href="https://www.facebook.com/share/1H9ej1gH4U/" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
               <FacebookIcon />
             </a>
-            <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" aria-label="YouTube">
+            {/* <a href="#" target="_blank" rel="noopener noreferrer" aria-label="YouTube">
               <YoutubeIcon />
             </a>
-            <a href="https://tiktok.com" target="_blank" rel="noopener noreferrer" aria-label="TikTok">
+            <a href="#" target="_blank" rel="noopener noreferrer" aria-label="TikTok">
               <TikTokIcon />
-            </a>
+            </a> */}
           </div>
         </div>
       </div>
