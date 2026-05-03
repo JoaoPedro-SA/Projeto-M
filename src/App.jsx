@@ -1,5 +1,6 @@
 import React, { useEffect, useMemo, useRef, useState } from 'react';
 import {
+  AlignCenter,
   ChevronDown,
   ChevronLeft,
   ChevronRight,
@@ -1172,10 +1173,11 @@ function Footer({ handleInternalLink }) {
         </div>
       </div>
       <div className="footer-bottom">
-        <div className="container footer-bottom-content">
-          <p>© 2026 MOVIMENTO MERAKI PILATES. TODOS OS DIREITOS RESERVADOS.</p>
-          <p className="designer-credit">DESIGN BY RAUL DESTEFANO</p>
-        </div>
+        <div
+          className="container footer-bottom-content"
+          style={{ justifyContent: 'center', textAlign: 'center' }}
+        >
+        <p>© {new Date().getFullYear()} Movimento Meraki Pilates. Todos os direitos reservados. Este site e seu conteúdo não podem ser reproduzidos sem autorização.</p>        </div>
       </div>
     </footer>
   );
