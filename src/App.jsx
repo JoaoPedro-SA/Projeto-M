@@ -1021,7 +1021,7 @@ function Location({ hoursOpen, setHoursOpen }) {
           </div>
           <div className="mt-4">
             <a
-              href="https://maps.app.goo.gl/yQYpXqXzZ6Z6Z6Z6"
+              href="https://www.google.com/maps/place/Movimento+Meraki+-+Pilates/@-23.5887242,-46.5797448,15.18z/data=!4m16!1m9!3m8!1s0x94ce5c1556c99607:0x2cdf705d8aadaede!2sR.+Pinheiro+Guimar%C3%A3es,+88+-+Parque+da+Vila+Prudente,+S%C3%A3o+Paulo+-+SP,+03141-030!3b1!8m2!3d-23.584186!4d-46.5744186!10e5!16s%2Fg%2F11fx2tpjfl!3m5!1s0x94ce5dc0c65a4b6f:0x14d23ee7b6380fec!8m2!3d-23.5841684!4d-46.5743825!16s%2Fg%2F11sm_tj13q?entry=ttu&g_ep=EgoyMDI2MDQyOS4wIKXMDSoASAFQAw%3D%3D"
               className="btn btn-primary"
               target="_blank"
               rel="noopener noreferrer"
